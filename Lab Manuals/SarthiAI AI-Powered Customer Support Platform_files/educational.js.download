@@ -1,0 +1,363 @@
+function educational(objMoodData) {
+    let widgetView = objMoodData.parentDiv;
+    let moodParentDiv;
+    let isStart = true;
+    // Mood transition with animation or without animation key from objMood data
+    let playMoodTransition = objMoodData.playAnimation != null && objMoodData.playAnimation != undefined ? objMoodData.playAnimation : true;
+    let animation = objMoodData.animationJSON.filter((obj) => obj.id == "CssMoodData")[0].data;
+
+    //------------------------------------------------------//
+    let transitionType = "single";
+    let loopArray = ["center", "lefttoright", "righttoleft", "toptobottom", "bottomtotop", "zoomin", "zoomout", "zoominout", "zoomoutin"];
+    // "moodshapebased" - based on mood based bg shapes
+    // "single" - only one animation plays full mood - bottomtotop animation will play default - if need some other animation change in below "transName"
+    // "loop" - looping 0-1-2-3-0-1-2-3-0
+    // "looparray" - ["animation1","animation2"] - depends on loopcount and loopArray
+    //------------------------------------------------------//
+    let transName = "fadein"; // center,lefttoright,righttoleft,toptobottom,bottomtotop,zoomin,zoomout,zoominout,zoomoutin,fadein
+    let tempTransName = "";
+    //------------------------------------------------------//
+    let loopCount = loopArray.length;
+    // let localIndex = transitionType == "looparray" ? -1 : 0;
+    let localIndex = -1;
+
+    let imageLoadComplete = false;
+    let videoLoadComplete = false;
+
+    let videoProps = objMoodData.fullAssets?.filter((obj) => obj.id == "introvideo")?.length > 0 ? objMoodData.fullAssets.filter((obj) => obj.id == "introvideo")[0] : null;
+
+    educational.prototype.updateAnimationType = function (doAnimation) {
+        playMoodTransition = doAnimation;
+    };
+
+    educational.prototype.createMood = function () {
+        if (widgetView) {
+            if (objMoodData.updateProgress) objMoodData.updateProgress(true, "moodjs");
+            clearParentChilds(widgetView);
+
+            // Creating main parent for moods all layouts.
+            moodParentDiv = document.createElement("div");
+            moodParentDiv.id = "moodParentDiv";
+            moodParentDiv.className = "moodParentDiv";
+            moodParentDiv.style.pointerEvents = "none";
+
+            // Creating style tag for transition and slide animation
+            let style = document.createElement("style");
+            style.id = "CssAnimStyle";
+            moodParentDiv.appendChild(style);
+
+            widgetView.appendChild(moodParentDiv);
+
+            createVideoIntroNodeCommon(videoProps, moodParentDiv, this.videoLoadCallbackCommon, objMoodData);
+
+            this.createSlide(0);
+            this.createSlide(1);
+
+            commonImageLoadTransition(objMoodData.animationJSON, moodParentDiv, this.imageLoadCallbackCommon, objMoodData);
+        }
+    };
+
+    educational.prototype.imageLoadCallbackCommon = function () {
+        imageLoadComplete = true;
+        commonLoadCompleteCallback();
+    };
+
+    educational.prototype.videoLoadCallbackCommon = function () {
+        videoLoadComplete = true;
+        commonLoadCompleteCallback();
+    };
+
+    function commonLoadCompleteCallback() {
+        if (videoLoadComplete && imageLoadComplete) {
+            if (objMoodData.updateProgress) objMoodData.updateProgress(false, "moodjs");
+            objMoodData.callback(objMoodData.slideId);
+        }
+    }
+
+    educational.prototype.createSlide = function (slideIndex) {
+        // Slide main parent
+        let moodSlideParent = document.createElement("div");
+        moodSlideParent.id = "slide" + slideIndex + "Parent";
+        moodSlideParent.className = "moodSlideParent";
+        moodParentDiv.appendChild(moodSlideParent);
+        moodSlideParent.style.opacity = 0;
+
+        // Slide content parent
+        let slideContentParentDiv = document.createElement("div");
+        slideContentParentDiv.id = "SLIDE" + slideIndex;
+        slideContentParentDiv.setAttribute("data-layer-name", "SLIDE" + slideIndex);
+        slideContentParentDiv.className = "moodSlideContentParentDiv";
+        moodSlideParent.appendChild(slideContentParentDiv);
+    };
+
+    educational.prototype.callStartAnimation = function (slideContent, slideIndex, callback, slideAddCompleteCallback, isPrevious, transitionEndCallback) {
+        widgetView.classList.add("widgetViewPaused");
+
+        this.slideIndex = slideIndex;
+        this.isPrevious = isPrevious;
+        this.slideContent = slideContent;
+        this.transitionEndCallback = transitionEndCallback;
+
+        let pos = slideIndex % 2 ? 1 : 0;
+
+        // Transition based on Types
+        if (transitionType == "loop") {
+            localIndex = localIndex + (isPrevious ? -1 : 1);
+            if (localIndex < 0) localIndex = 9;
+            if (localIndex > 9) localIndex = 0;
+
+            if (localIndex % 10 == 0) transName = "center";
+            else if (localIndex % 10 == 1) transName = "lefttoright";
+            else if (localIndex % 10 == 2) transName = "righttoleft";
+            else if (localIndex % 10 == 3) transName = "toptobottom";
+            else if (localIndex % 10 == 4) transName = "bottomtotop";
+            else if (localIndex % 10 == 5) transName = "fadein";
+            else if (localIndex % 10 == 6) transName = "zoomin";
+            else if (localIndex % 10 == 7) transName = "zoomout";
+            else if (localIndex % 10 == 8) transName = "zoominout";
+            else if (localIndex % 10 == 9) transName = "zoomoutin";
+        } else if (transitionType == "looparray") {
+            localIndex = localIndex + (isPrevious ? -1 : 1);
+
+            if (localIndex > loopCount - 1) localIndex = 0;
+            if (localIndex < 0) localIndex = loopCount - 1;
+
+            let transNameIndex = localIndex + (isPrevious ? 1 : 0);
+            if (transNameIndex >= loopCount) transNameIndex = 0;
+            transName = loopArray[transNameIndex] ? loopArray[transNameIndex] : "righttoleft";
+        } else if (transitionType == "moodshapebased") {
+            let layoutName = "";
+
+            //Getting layout name based on mood bg shapes
+            if (slideContent && slideContent.querySelector("[id='LAYOUT_SHAPE']")) {
+                let layoutShape = slideContent.querySelector("[id='LAYOUT_SHAPE']");
+                if (layoutShape && layoutShape.hasAttribute("data-layoutshape-type")) layoutName = layoutShape.getAttribute("data-layoutshape-type");
+            }
+
+            // Getting animation depends on asset/layouts from Mood Json
+            let animationRightToLeft = animation.righttoleft.layouts.split(",");
+            let animationLeftToRight = animation.lefttoright.layouts.split(",");
+            let animationTopToBottom = animation.toptobottom.layouts.split(",");
+            let animationBottomToTop = animation.bottomtotop.layouts.split(",");
+            let animationZoomIn = animation.zoomin.layouts.split(",");
+            let animationZoomOut = animation.zoomout.layouts.split(",");
+            let animationZoomInOut = animation.zoominout.layouts.split(",");
+            let animationZoomOutIn = animation.zoomoutin.layouts.split(",");
+            let animationFadeIn = animation.fadein.layouts.split(",");
+            let animationCenter = animation.center.layouts.split(",");
+
+            let isRightToLeft = animationRightToLeft.filter((obj) => obj == layoutName);
+            let isLeftToRight = animationLeftToRight.filter((obj) => obj == layoutName);
+            let isTopToBottom = animationTopToBottom.filter((obj) => obj == layoutName);
+            let isBottomToTop = animationBottomToTop.filter((obj) => obj == layoutName);
+            let isZoomIn = animationZoomIn.filter((obj) => obj == layoutName);
+            let isZoomOut = animationZoomOut.filter((obj) => obj == layoutName);
+            let isZoomInOut = animationZoomInOut.filter((obj) => obj == layoutName);
+            let isZoomOutIn = animationZoomOutIn.filter((obj) => obj == layoutName);
+            let isFadeIn = animationFadeIn.filter((obj) => obj == layoutName);
+            let isCenter = animationCenter.filter((obj) => obj == layoutName);
+
+            if (isRightToLeft.length > 0) transName = "righttoleft";
+            else if (isLeftToRight.length > 0) transName = "lefttoright";
+            else if (isTopToBottom.length > 0) transName = "toptobottom";
+            else if (isBottomToTop.length > 0) transName = "bottomtotop";
+            else if (isZoomIn.length > 0) transName = "zoomin";
+            else if (isZoomOut.length > 0) transName = "zoomout";
+            else if (isZoomInOut.length > 0) transName = "zoominout";
+            else if (isZoomOutIn.length > 0) transName = "zoomoutin";
+            else if (isFadeIn.length > 0) transName = "fadein";
+            else if (isCenter.length > 0) transName = "center";
+            else transName = "righttoleft";
+            localIndex = localIndex + 1;
+        }
+
+        if (transitionType == "loop" || transitionType == "looparray" || transitionType == "moodshapebased") {
+            if (isPrevious && transName == "righttoleft") transName = "lefttoright";
+            else if (isPrevious && transName == "lefttoright") transName = "righttoleft";
+            else if (isPrevious && transName == "toptobottom") transName = "bottomtotop";
+            else if (isPrevious && transName == "bottomtotop") transName = "toptobottom";
+            else if (isPrevious && transName == "zoomin") transName = "zoomout";
+            else if (isPrevious && transName == "zoomout") transName = "zoomin";
+            else if (isPrevious && transName == "zoomoutin") transName = "zoominout";
+            else if (isPrevious && transName == "zoominout") transName = "zoomoutin";
+        } else {
+            if (!isPrevious && tempTransName) transName = tempTransName;
+            if (!tempTransName) tempTransName = transName;
+            if (isPrevious && tempTransName == "righttoleft") transName = "lefttoright";
+            else if (isPrevious && tempTransName == "lefttoright") transName = "righttoleft";
+            else if (isPrevious && tempTransName == "toptobottom") transName = "bottomtotop";
+            else if (isPrevious && tempTransName == "bottomtotop") transName = "toptobottom";
+            else if (isPrevious && tempTransName == "zoomin") transName = "zoomout";
+            else if (isPrevious && tempTransName == "zoomout") transName = "zoomin";
+            else if (isPrevious && tempTransName == "zoomoutin") transName = "zoominout";
+            else if (isPrevious && tempTransName == "zoominout") transName = "zoomoutin";
+        }
+
+        // Getting show/hide delay of asset/transtion from Mood Json
+        this.showgraphicDelay = playMoodTransition == false || isStart ? 0 : animation[transName].showgraphic;
+        this.hidegraphicDelay = playMoodTransition == false ? 0 : animation[transName].hidegraphic;
+
+        // Hide animation delay
+        objMoodData.transitionDelay ? objMoodData.transitionDelay(this.hidegraphicDelay * 1000) : "";
+
+        let slide0Content = moodParentDiv.querySelector("[id='SLIDE" + pos + "']");
+        let doAnimAfterObserverInstance = this.doAnimAfterObserver.bind(this);
+        let observer = new MutationObserver(function () {
+            doAnimAfterObserverInstance(isPrevious, slideAddCompleteCallback, callback, slideIndex);
+            observer.disconnect();
+        });
+        observer.observe(slide0Content, {
+            subtree: true,
+            childList: true,
+        });
+        if (slide0Content) {
+            // Adding slide content to mood slide container
+            clearParentChilds(slide0Content);
+            slide0Content.appendChild(this.slideContent);
+        }
+    };
+
+    educational.prototype.doAnimAfterObserver = function (isPrevious, slideAddCompleteCallback, callback, slideIndex) {
+        //Coverpage Intro lottie animation
+        this.introDelay = 0;
+        if (isStart == true && slideIndex == 0) {
+            let objData = createIntroForCoverPage(moodParentDiv, objMoodData.animationJSON, objMoodData.playAnimation, "", this.slideContent, objMoodData, "commonLayout " + objMoodData.moodData.name, this.slideContent?.getAttribute("data-theme-group-name") || "");
+            if (objData) this.objData = objData;
+        }
+
+        this.introDelay = !playMoodTransition ? 0 : isStart == true && slideIndex == 0 && videoProps?.graphicstart ? parseFloat(videoProps?.graphicstart || 0) * 1000 : this.objData?.introdelay && isStart == true ? this.objData.introdelay : 0;
+        this.slideContent.setAttribute("data-transdelay", this.showgraphicDelay);
+        this.slideContent.style.setProperty("--transdelay", this.showgraphicDelay + this.introDelay / 1000 + "s");
+        slideAddCompleteCallback ? slideAddCompleteCallback() : "";
+        callback ? callback(0) : "";
+    };
+
+    educational.prototype.doTransitionAnimation = function () {
+        if (this.objData && this.objData.lottieAnimation && isStart) {
+            let lottieAnimDiv = moodParentDiv.querySelector("[id='lottieAnimDiv']");
+            let imageNodes = lottieAnimDiv.getElementsByTagName("image");
+            if (imageNodes.length > 0 && objMoodData.appStaticURL) {
+                for (let a = 0; a < imageNodes.length; a++) {
+                    if (imageNodes[a].hasAttribute("href") && imageNodes[a].getAttribute("href").includes(objMoodData.appStaticURL) == false && !imageNodes[a].getAttribute("href").startsWith("http")) {
+                        imageNodes[a].setAttribute("href", objMoodData.appStaticURL + imageNodes[a].getAttribute("href"));
+                    }
+                }
+            }
+
+            if (objMoodData.updateIntroVideoEvent) objMoodData.updateIntroVideoEvent(true);
+
+            this.objData.lottieAnimation.playSegments([0, this.objData.endFrame ? this.objData.endFrame : 0], true);
+
+            this.objData.lottieAnimation.addEventListener("complete", () => {
+                if (objMoodData.updateIntroVideoEvent) objMoodData.updateIntroVideoEvent(false);
+                this.objData.lottieAnimation.removeEventListener("complete");
+            });
+        }
+
+        playIntroAnimationCommon(moodParentDiv, videoProps, playMoodTransition, isStart, null, this.slideIndex);
+
+        setTimeout(() => {
+            this.afterCompleteShow(this.slideContent, this.slideIndex, this.isPrevious);
+        }, this.introDelay);
+    };
+
+    educational.prototype.afterCompleteShow = function (slideContent, slideIndex, isPrevious) {
+        let pos = slideIndex % 2 ? 1 : 0;
+        let posOld = slideIndex % 2 ? 0 : 1;
+
+        let slide0Data = moodParentDiv.querySelector("[id='slide" + pos + "Parent']");
+        let slide1Data = moodParentDiv.querySelector("[id='slide" + posOld + "Parent']");
+
+        removeTransitionClassNames(slide0Data, slide1Data);
+
+        slide0Data.style.zIndex = 1;
+        slide1Data.style.zIndex = 0;
+
+        slide0Data.style.pointerEvents = "none";
+        slide1Data.style.pointerEvents = "none";
+        slideContent.style.pointerEvents = "all";
+
+        let transitionDuration = this.showSlideAnimation(transName, isStart, slide0Data, slide1Data);
+        widgetView.classList.remove("widgetViewPaused");
+        if (playMoodTransition == false) transitionDuration = 0;
+        if (this.transitionEndCallback) {
+            setTimeout(() => {
+                this.transitionEndCallback();
+                isStart = false;
+            }, transitionDuration);
+        }
+    };
+
+    educational.prototype.showSlideAnimation = function (transName, isStart, showSlide, hideSlide) {
+        showSlide.style.removeProperty("opacity");
+        showSlide.style.removeProperty("transition");
+
+        showSlide.style.zIndex = transName == "center" || transName == "fadein" ? 1 : 0;
+        hideSlide.style.zIndex = transName == "center" || transName == "fadein" ? 0 : 1;
+        if (!playMoodTransition) {
+            showSlide.style.zIndex = 1;
+            hideSlide.style.zIndex = 0;
+        }
+
+        if (transName == "center") {
+            showSlide.classList.add("slideAnimationCenter");
+        } else if (transName == "righttoleft") {
+            if (isStart == false) hideSlide.classList.add("slideAnimationRtLHide");
+            showSlide.classList.add("slideAnimationRtL");
+        } else if (transName == "lefttoright") {
+            if (isStart == false) hideSlide.classList.add("slideAnimationLtRHide");
+            showSlide.classList.add("slideAnimationLtR");
+        } else if (transName == "toptobottom") {
+            if (isStart == false) hideSlide.classList.add("slideAnimationTtBHide");
+            showSlide.classList.add("slideAnimationTtB");
+        } else if (transName == "bottomtotop") {
+            if (isStart == false) hideSlide.classList.add("slideAnimationBtTHide");
+            showSlide.classList.add("slideAnimationBtT");
+        } else if (transName == "fadein") {
+            if (isStart == false) hideSlide.classList.add("slideAnimationFadeInHide");
+            showSlide.classList.add("slideAnimationFadeIn");
+        } else if (transName.includes("zoom")) {
+            let transitionTypeName = transName == "zoomin" ? "In" : transName == "zoominout" ? "InOut" : transName == "zoomoutin" ? "OutIn" : "Out";
+            showSlide.classList.remove("slideZoom" + transitionTypeName + "Hide");
+            showSlide.classList.remove("slideZoom" + transitionTypeName + "Show");
+
+            hideSlide.classList.remove("slideZoom" + transitionTypeName + "Hide");
+            hideSlide.classList.remove("slideZoom" + transitionTypeName + "Show");
+
+            if (isStart == true) {
+                showSlide.classList.add("slideZoom" + transitionTypeName + "Show");
+            } else {
+                showSlide.classList.add("slideZoom" + transitionTypeName + "Show");
+                hideSlide.classList.add("slideZoom" + transitionTypeName + "Hide");
+            }
+        }
+
+        if (playMoodTransition == false) {
+            showSlide.classList.add("noAnimation");
+            hideSlide.classList.add("noAnimation");
+        }
+
+        let durationValue = parseFloat(window.getComputedStyle(showSlide).animationDuration) * 1000;
+        let delayValue = parseFloat(window.getComputedStyle(showSlide).animationDelay) * 1000;
+        let totalTime = durationValue + delayValue;
+        return totalTime;
+    };
+
+    educational.prototype.transitionReplay = function () {
+        isStart = true;
+        let slide0Content = moodParentDiv.querySelector("[id='SLIDE0']");
+        if (slide0Content) {
+            slide0Content.innerHTML = "";
+            slide0Content.parentElement.style.opacity = "0";
+        }
+        let slide1Content = moodParentDiv.querySelector("[id='SLIDE1']");
+        if (slide1Content) {
+            slide1Content.innerHTML = "";
+            slide1Content.parentElement.style.opacity = "0";
+        }
+    };
+
+    educational.prototype.getMoodTransitionName = function () {
+        return transName;
+    };
+}

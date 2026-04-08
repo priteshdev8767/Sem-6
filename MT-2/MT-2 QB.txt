@@ -1,0 +1,21 @@
+Mobile Computing 
+1 mobile ip topology 
+2 process
+3 management 
+4 cellular ip
+
+Spcc Mt2 
+Questions 
+1 Phases of compiler 
+2 Pass1 of macro processor
+
+
+MT-2 CSS
+
+1.Compare HMAC & CMAC cipher-based authentication.
+
+2.What is the significance of digital signature in a certificate?
+
+3.Explain the properties of hash function which attacks are possible use in digital signature.
+
+4.Discuss digital signature in detail.

@@ -1,0 +1,1025 @@
+.th-light {
+    --th-slide-primary: 245, 245, 244;
+    --th-slide-contrast: 25, 25, 25;
+    --th-slide-secondary: 58, 58, 57;
+    --th-slide-tertiary: 110, 110, 110;
+    --th-slide-alternate-primary: 236, 245, 214;
+    --th-section-color1: 252, 108, 29;
+    --th-section-color2: 191, 70, 218;
+    --th-section-color3: 120, 74, 236;
+    --th-section-color4: 45, 89, 221;
+    --th-section-color5: 240, 103, 29;
+    --th-section-color6: 179, 66, 204;
+}
+
+.th-light .th-sections-dark-tint .th-section1 {
+    --th-section-primary: 25, 25, 25;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark-tint .th-section2 {
+    --th-section-primary: 36, 36, 36;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark-tint .th-section3 {
+    --th-section-primary: 44, 44, 44;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark-tint .th-section4 {
+    --th-section-primary: 49, 49, 49;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark-tint .th-section5 {
+    --th-section-primary: 57, 57, 57;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark-tint .th-section6 {
+    --th-section-primary: 65, 65, 65;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark-tint .th-section7 {
+    --th-section-primary: 72, 72, 72;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark-tint .th-section8 {
+    --th-section-primary: 77, 77, 77;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark-tint .th-section9 {
+    --th-section-primary: 85, 85, 85;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark-tint .th-section10 {
+    --th-section-primary: 93, 93, 93;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark-tint .th-section11 {
+    --th-section-primary: 100, 100, 100;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark-tint .th-section12 {
+    --th-section-primary: 108, 108, 108;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-dark1 .th-section1,
+.th-light .th-sections-dark1 .th-section2,
+.th-light .th-sections-dark1 .th-section3,
+.th-light .th-sections-dark1 .th-section4,
+.th-light .th-sections-dark1 .th-section5,
+.th-light .th-sections-dark1 .th-section6,
+.th-light .th-sections-dark1 .th-section7,
+.th-light .th-sections-dark1 .th-section8,
+.th-light .th-sections-dark1 .th-section9,
+.th-light .th-sections-dark1 .th-section10,
+.th-light .th-sections-dark1 .th-section11,
+.th-light .th-sections-dark1 .th-section12 {
+    --th-section-primary: 25, 25, 25;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section1 {
+    --th-section-primary: 252, 108, 29;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section2 {
+    --th-section-primary: 191, 70, 218;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section3 {
+    --th-section-primary: 120, 74, 236;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section4 {
+    --th-section-primary: 45, 89, 221;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section5 {
+    --th-section-primary: 240, 103, 29;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section6 {
+    --th-section-primary: 179, 66, 204;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section7 {
+    --th-section-primary: 114, 70, 224;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section8 {
+    --th-section-primary: 43, 84, 209;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section9 {
+    --th-section-primary: 227, 97, 26;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section10 {
+    --th-section-primary: 167, 61, 191;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section11 {
+    --th-section-primary: 107, 66, 212;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme-multiple .th-section12 {
+    --th-section-primary: 40, 79, 196;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme1 .th-section1,
+.th-light .th-sections-theme1 .th-section2,
+.th-light .th-sections-theme1 .th-section3,
+.th-light .th-sections-theme1 .th-section4,
+.th-light .th-sections-theme1 .th-section5,
+.th-light .th-sections-theme1 .th-section6,
+.th-light .th-sections-theme1 .th-section7,
+.th-light .th-sections-theme1 .th-section8,
+.th-light .th-sections-theme1 .th-section9,
+.th-light .th-sections-theme1 .th-section10,
+.th-light .th-sections-theme1 .th-section11,
+.th-light .th-sections-theme1 .th-section12 {
+    --th-section-primary: 252, 108, 29;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme2 .th-section1,
+.th-light .th-sections-theme2 .th-section2,
+.th-light .th-sections-theme2 .th-section3,
+.th-light .th-sections-theme2 .th-section4,
+.th-light .th-sections-theme2 .th-section5,
+.th-light .th-sections-theme2 .th-section6,
+.th-light .th-sections-theme2 .th-section7,
+.th-light .th-sections-theme2 .th-section8,
+.th-light .th-sections-theme2 .th-section9,
+.th-light .th-sections-theme2 .th-section10,
+.th-light .th-sections-theme2 .th-section11,
+.th-light .th-sections-theme2 .th-section12 {
+    --th-section-primary: 191, 70, 218;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme3 .th-section1,
+.th-light .th-sections-theme3 .th-section2,
+.th-light .th-sections-theme3 .th-section3,
+.th-light .th-sections-theme3 .th-section4,
+.th-light .th-sections-theme3 .th-section5,
+.th-light .th-sections-theme3 .th-section6,
+.th-light .th-sections-theme3 .th-section7,
+.th-light .th-sections-theme3 .th-section8,
+.th-light .th-sections-theme3 .th-section9,
+.th-light .th-sections-theme3 .th-section10,
+.th-light .th-sections-theme3 .th-section11,
+.th-light .th-sections-theme3 .th-section12 {
+    --th-section-primary: 120, 74, 236;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-light .th-sections-theme4 .th-section1,
+.th-light .th-sections-theme4 .th-section2,
+.th-light .th-sections-theme4 .th-section3,
+.th-light .th-sections-theme4 .th-section4,
+.th-light .th-sections-theme4 .th-section5,
+.th-light .th-sections-theme4 .th-section6,
+.th-light .th-sections-theme4 .th-section7,
+.th-light .th-sections-theme4 .th-section8,
+.th-light .th-sections-theme4 .th-section9,
+.th-light .th-sections-theme4 .th-section10,
+.th-light .th-sections-theme4 .th-section11,
+.th-light .th-sections-theme4 .th-section12 {
+    --th-section-primary: 45, 89, 221;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark {
+    --th-slide-primary: 25, 25, 25;
+    --th-slide-contrast: 245, 245, 244;
+    --th-slide-secondary: 224, 223, 219;
+    --th-slide-tertiary: 174, 173, 168;
+    --th-slide-alternate-primary: 35, 35, 35;
+    --th-section-color1: 252, 108, 29;
+    --th-section-color2: 191, 70, 218;
+    --th-section-color3: 120, 74, 236;
+    --th-section-color4: 45, 89, 221;
+    --th-section-color5: 240, 103, 29;
+    --th-section-color6: 179, 66, 204;
+}
+
+.th-dark .th-sections-light-tint .th-section1 {
+    --th-section-primary: 242, 242, 241;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-light-tint .th-section2 {
+    --th-section-primary: 237, 236, 235;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-light-tint .th-section3 {
+    --th-section-primary: 230, 230, 228;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-light-tint .th-section4 {
+    --th-section-primary: 230, 230, 228;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-light-tint .th-section5 {
+    --th-section-primary: 217, 217, 214;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-light-tint .th-section6 {
+    --th-section-primary: 213, 213, 210;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-light-tint .th-section7 {
+    --th-section-primary: 207, 207, 203;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-light-tint .th-section8 {
+    --th-section-primary: 200, 200, 196;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-light-tint .th-section9 {
+    --th-section-primary: 195, 194, 190;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-light-tint .th-section10 {
+    --th-section-primary: 188, 187, 183;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-light-tint .th-section11 {
+    --th-section-primary: 182, 182, 177;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-light-tint .th-section12 {
+    --th-section-primary: 176, 175, 171;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-light1 .th-section1,
+.th-dark .th-sections-light1 .th-section2,
+.th-dark .th-sections-light1 .th-section3,
+.th-dark .th-sections-light1 .th-section4,
+.th-dark .th-sections-light1 .th-section5,
+.th-dark .th-sections-light1 .th-section6,
+.th-dark .th-sections-light1 .th-section7,
+.th-dark .th-sections-light1 .th-section8,
+.th-dark .th-sections-light1 .th-section9,
+.th-dark .th-sections-light1 .th-section10,
+.th-dark .th-sections-light1 .th-section11,
+.th-dark .th-sections-light1 .th-section12 {
+    --th-section-primary: 242, 242, 241;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-dark .th-sections-theme-multiple .th-section1 {
+    --th-section-primary: 252, 108, 29;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme-multiple .th-section2 {
+    --th-section-primary: 191, 70, 218;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme-multiple .th-section3 {
+    --th-section-primary: 120, 74, 236;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme-multiple .th-section4 {
+    --th-section-primary: 45, 89, 221;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme-multiple .th-section5 {
+    --th-section-primary: 240, 103, 29;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme-multiple .th-section6 {
+    --th-section-primary: 179, 66, 204;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme-multiple .th-section7 {
+    --th-section-primary: 114, 70, 224;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme-multiple .th-section8 {
+    --th-section-primary: 43, 84, 209;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme-multiple .th-section9 {
+    --th-section-primary: 227, 97, 26;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme-multiple .th-section10 {
+    --th-section-primary: 167, 61, 191;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme-multiple .th-section11 {
+    --th-section-primary: 107, 66, 212;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme-multiple .th-section12 {
+    --th-section-primary: 40, 79, 196;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme1 .th-section1,
+.th-dark .th-sections-theme1 .th-section2,
+.th-dark .th-sections-theme1 .th-section3,
+.th-dark .th-sections-theme1 .th-section4,
+.th-dark .th-sections-theme1 .th-section5,
+.th-dark .th-sections-theme1 .th-section6,
+.th-dark .th-sections-theme1 .th-section7,
+.th-dark .th-sections-theme1 .th-section8,
+.th-dark .th-sections-theme1 .th-section9,
+.th-dark .th-sections-theme1 .th-section10,
+.th-dark .th-sections-theme1 .th-section11,
+.th-dark .th-sections-theme1 .th-section12 {
+    --th-section-primary: 252, 108, 29;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme2 .th-section1,
+.th-dark .th-sections-theme2 .th-section2,
+.th-dark .th-sections-theme2 .th-section3,
+.th-dark .th-sections-theme2 .th-section4,
+.th-dark .th-sections-theme2 .th-section5,
+.th-dark .th-sections-theme2 .th-section6,
+.th-dark .th-sections-theme2 .th-section7,
+.th-dark .th-sections-theme2 .th-section8,
+.th-dark .th-sections-theme2 .th-section9,
+.th-dark .th-sections-theme2 .th-section10,
+.th-dark .th-sections-theme2 .th-section11,
+.th-dark .th-sections-theme2 .th-section12 {
+    --th-section-primary: 191, 70, 218;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme3 .th-section1,
+.th-dark .th-sections-theme3 .th-section2,
+.th-dark .th-sections-theme3 .th-section3,
+.th-dark .th-sections-theme3 .th-section4,
+.th-dark .th-sections-theme3 .th-section5,
+.th-dark .th-sections-theme3 .th-section6,
+.th-dark .th-sections-theme3 .th-section7,
+.th-dark .th-sections-theme3 .th-section8,
+.th-dark .th-sections-theme3 .th-section9,
+.th-dark .th-sections-theme3 .th-section10,
+.th-dark .th-sections-theme3 .th-section11,
+.th-dark .th-sections-theme3 .th-section12 {
+    --th-section-primary: 120, 74, 236;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-dark .th-sections-theme4 .th-section1,
+.th-dark .th-sections-theme4 .th-section2,
+.th-dark .th-sections-theme4 .th-section3,
+.th-dark .th-sections-theme4 .th-section4,
+.th-dark .th-sections-theme4 .th-section5,
+.th-dark .th-sections-theme4 .th-section6,
+.th-dark .th-sections-theme4 .th-section7,
+.th-dark .th-sections-theme4 .th-section8,
+.th-dark .th-sections-theme4 .th-section9,
+.th-dark .th-sections-theme4 .th-section10,
+.th-dark .th-sections-theme4 .th-section11,
+.th-dark .th-sections-theme4 .th-section12 {
+    --th-section-primary: 45, 89, 221;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-color1 {
+    --th-slide-primary: 252, 108, 29;
+    --th-slide-contrast: 245, 245, 244;
+    --th-slide-secondary: 224, 223, 219;
+    --th-slide-tertiary: 174, 173, 168;
+    --th-slide-alternate-primary: 255, 117, 41;
+    --th-section-color1: 242, 242, 241;
+    --th-section-color2: 237, 236, 235;
+    --th-section-color3: 230, 230, 228;
+    --th-section-color4: 230, 230, 228;
+    --th-section-color5: 217, 217, 214;
+    --th-section-color6: 213, 213, 210;
+}
+
+.th-color1 .th-sections-light-tint .th-section1 {
+    --th-section-primary: 242, 242, 241;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color1 .th-sections-light-tint .th-section2 {
+    --th-section-primary: 237, 236, 235;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color1 .th-sections-light-tint .th-section3 {
+    --th-section-primary: 230, 230, 228;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color1 .th-sections-light-tint .th-section4 {
+    --th-section-primary: 230, 230, 228;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color1 .th-sections-light-tint .th-section5 {
+    --th-section-primary: 217, 217, 214;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color1 .th-sections-light-tint .th-section6 {
+    --th-section-primary: 213, 213, 210;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color1 .th-sections-light-tint .th-section7 {
+    --th-section-primary: 207, 207, 203;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color1 .th-sections-light-tint .th-section8 {
+    --th-section-primary: 200, 200, 196;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color1 .th-sections-light-tint .th-section9 {
+    --th-section-primary: 195, 194, 190;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color1 .th-sections-light-tint .th-section10 {
+    --th-section-primary: 188, 187, 183;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color1 .th-sections-light-tint .th-section11 {
+    --th-section-primary: 182, 182, 177;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color1 .th-sections-light-tint .th-section12 {
+    --th-section-primary: 176, 175, 171;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-color1 .th-sections-light1 .th-section1,
+.th-color1 .th-sections-light1 .th-section2,
+.th-color1 .th-sections-light1 .th-section3,
+.th-color1 .th-sections-light1 .th-section4,
+.th-color1 .th-sections-light1 .th-section5,
+.th-color1 .th-sections-light1 .th-section6,
+.th-color1 .th-sections-light1 .th-section7,
+.th-color1 .th-sections-light1 .th-section8,
+.th-color1 .th-sections-light1 .th-section9,
+.th-color1 .th-sections-light1 .th-section10,
+.th-color1 .th-sections-light1 .th-section11,
+.th-color1 .th-sections-light1 .th-section12 {
+    --th-section-primary: 242, 242, 241;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 {
+    --th-slide-primary: 191, 70, 218;
+    --th-slide-contrast: 245, 245, 244;
+    --th-slide-secondary: 224, 223, 219;
+    --th-slide-tertiary: 174, 173, 168;
+    --th-slide-alternate-primary: 198, 79, 224;
+    --th-section-color1: 242, 242, 241;
+    --th-section-color2: 237, 236, 235;
+    --th-section-color3: 230, 230, 228;
+    --th-section-color4: 230, 230, 228;
+    --th-section-color5: 217, 217, 214;
+    --th-section-color6: 213, 213, 210;
+}
+
+.th-color2 .th-sections-light-tint .th-section1 {
+    --th-section-primary: 242, 242, 241;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 .th-sections-light-tint .th-section2 {
+    --th-section-primary: 237, 236, 235;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 .th-sections-light-tint .th-section3 {
+    --th-section-primary: 230, 230, 228;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 .th-sections-light-tint .th-section4 {
+    --th-section-primary: 230, 230, 228;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 .th-sections-light-tint .th-section5 {
+    --th-section-primary: 217, 217, 214;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 .th-sections-light-tint .th-section6 {
+    --th-section-primary: 213, 213, 210;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 .th-sections-light-tint .th-section7 {
+    --th-section-primary: 207, 207, 203;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 .th-sections-light-tint .th-section8 {
+    --th-section-primary: 200, 200, 196;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 .th-sections-light-tint .th-section9 {
+    --th-section-primary: 195, 194, 190;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 .th-sections-light-tint .th-section10 {
+    --th-section-primary: 188, 187, 183;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 .th-sections-light-tint .th-section11 {
+    --th-section-primary: 182, 182, 177;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color2 .th-sections-light-tint .th-section12 {
+    --th-section-primary: 176, 175, 171;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-color2 .th-sections-light1 .th-section1,
+.th-color2 .th-sections-light1 .th-section2,
+.th-color2 .th-sections-light1 .th-section3,
+.th-color2 .th-sections-light1 .th-section4,
+.th-color2 .th-sections-light1 .th-section5,
+.th-color2 .th-sections-light1 .th-section6,
+.th-color2 .th-sections-light1 .th-section7,
+.th-color2 .th-sections-light1 .th-section8,
+.th-color2 .th-sections-light1 .th-section9,
+.th-color2 .th-sections-light1 .th-section10,
+.th-color2 .th-sections-light1 .th-section11,
+.th-color2 .th-sections-light1 .th-section12 {
+    --th-section-primary: 242, 242, 241;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 {
+    --th-slide-primary: 120, 74, 236;
+    --th-slide-contrast: 245, 245, 244;
+    --th-slide-secondary: 224, 223, 219;
+    --th-slide-tertiary: 174, 173, 168;
+    --th-slide-alternate-primary: 129, 83, 245;
+    --th-section-color1: 242, 242, 241;
+    --th-section-color2: 237, 236, 235;
+    --th-section-color3: 230, 230, 228;
+    --th-section-color4: 230, 230, 228;
+    --th-section-color5: 217, 217, 214;
+    --th-section-color6: 213, 213, 210;
+}
+
+.th-color3 .th-sections-light-tint .th-section1 {
+    --th-section-primary: 242, 242, 241;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 .th-sections-light-tint .th-section2 {
+    --th-section-primary: 237, 236, 235;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 .th-sections-light-tint .th-section3 {
+    --th-section-primary: 230, 230, 228;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 .th-sections-light-tint .th-section4 {
+    --th-section-primary: 230, 230, 228;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 .th-sections-light-tint .th-section5 {
+    --th-section-primary: 217, 217, 214;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 .th-sections-light-tint .th-section6 {
+    --th-section-primary: 213, 213, 210;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 .th-sections-light-tint .th-section7 {
+    --th-section-primary: 207, 207, 203;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 .th-sections-light-tint .th-section8 {
+    --th-section-primary: 200, 200, 196;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 .th-sections-light-tint .th-section9 {
+    --th-section-primary: 195, 194, 190;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 .th-sections-light-tint .th-section10 {
+    --th-section-primary: 188, 187, 183;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 .th-sections-light-tint .th-section11 {
+    --th-section-primary: 182, 182, 177;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color3 .th-sections-light-tint .th-section12 {
+    --th-section-primary: 176, 175, 171;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-color3 .th-sections-light1 .th-section1,
+.th-color3 .th-sections-light1 .th-section2,
+.th-color3 .th-sections-light1 .th-section3,
+.th-color3 .th-sections-light1 .th-section4,
+.th-color3 .th-sections-light1 .th-section5,
+.th-color3 .th-sections-light1 .th-section6,
+.th-color3 .th-sections-light1 .th-section7,
+.th-color3 .th-sections-light1 .th-section8,
+.th-color3 .th-sections-light1 .th-section9,
+.th-color3 .th-sections-light1 .th-section10,
+.th-color3 .th-sections-light1 .th-section11,
+.th-color3 .th-sections-light1 .th-section12 {
+    --th-section-primary: 242, 242, 241;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 {
+    --th-slide-primary: 45, 89, 221;
+    --th-slide-contrast: 245, 245, 244;
+    --th-slide-secondary: 224, 223, 219;
+    --th-slide-tertiary: 174, 173, 168;
+    --th-slide-alternate-primary: 53, 97, 229;
+    --th-section-color1: 242, 242, 241;
+    --th-section-color2: 237, 236, 235;
+    --th-section-color3: 230, 230, 228;
+    --th-section-color4: 230, 230, 228;
+    --th-section-color5: 217, 217, 214;
+    --th-section-color6: 213, 213, 210;
+}
+
+.th-color4 .th-sections-light-tint .th-section1 {
+    --th-section-primary: 242, 242, 241;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 .th-sections-light-tint .th-section2 {
+    --th-section-primary: 237, 236, 235;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 .th-sections-light-tint .th-section3 {
+    --th-section-primary: 230, 230, 228;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 .th-sections-light-tint .th-section4 {
+    --th-section-primary: 230, 230, 228;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 .th-sections-light-tint .th-section5 {
+    --th-section-primary: 217, 217, 214;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 .th-sections-light-tint .th-section6 {
+    --th-section-primary: 213, 213, 210;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 .th-sections-light-tint .th-section7 {
+    --th-section-primary: 207, 207, 203;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 .th-sections-light-tint .th-section8 {
+    --th-section-primary: 200, 200, 196;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 .th-sections-light-tint .th-section9 {
+    --th-section-primary: 195, 194, 190;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 .th-sections-light-tint .th-section10 {
+    --th-section-primary: 188, 187, 183;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 .th-sections-light-tint .th-section11 {
+    --th-section-primary: 182, 182, 177;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+.th-color4 .th-sections-light-tint .th-section12 {
+    --th-section-primary: 176, 175, 171;
+    --th-section-contrast: 245, 245, 244;
+    --th-section-secondary: 224, 223, 219;
+    --th-section-tertiary: 174, 173, 168;
+}
+
+.th-color4 .th-sections-light1 .th-section1,
+.th-color4 .th-sections-light1 .th-section2,
+.th-color4 .th-sections-light1 .th-section3,
+.th-color4 .th-sections-light1 .th-section4,
+.th-color4 .th-sections-light1 .th-section5,
+.th-color4 .th-sections-light1 .th-section6,
+.th-color4 .th-sections-light1 .th-section7,
+.th-color4 .th-sections-light1 .th-section8,
+.th-color4 .th-sections-light1 .th-section9,
+.th-color4 .th-sections-light1 .th-section10,
+.th-color4 .th-sections-light1 .th-section11,
+.th-color4 .th-sections-light1 .th-section12 {
+    --th-section-primary: 242, 242, 241;
+    --th-section-contrast: 25, 25, 25;
+    --th-section-secondary: 58, 58, 57;
+    --th-section-tertiary: 110, 110, 110;
+}
+
+/* Common Slide Blocks start*/
+.th-slide-element {
+    --th-slide-color1: 252, 108, 29;
+    --th-slide-color2: 191, 70, 218;
+    --th-slide-color3: 120, 74, 236;
+    --th-slide-color4: 45, 89, 221;
+    --th-slide-color5: 240, 103, 29;
+    --th-slide-color6: 179, 66, 204;
+    --th-slide-color7: 114, 70, 224;
+    --th-slide-color8: 43, 84, 209;
+    --th-slide-color9: 227, 97, 26;
+    --th-slide-color10: 167, 61, 191;
+    --th-slide-color11: 107, 66, 212;
+    --th-slide-color12: 40, 79, 196;
+}
+
+/* Common Slide Blocks end*/
